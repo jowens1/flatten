@@ -11,8 +11,8 @@ const arrayToFlatten = [ 1, [2,3], [4,5]];
  */
 const flatFunc = (array) => array.reduce((acc, cur) => acc.concat(Array.isArray(cur) ? flatFunc(cur) : cur), [])
 
-const ownFuncFlattenedArray = flatFunc(arrayToFlatten);
+const flattenedArray = flatFunc(arrayToFlatten);
 
-console.log('Array being flattened by hand written function ',ownFuncFlattenedArray);
+console.log('Array being flattened by hand written function ', flattenedArray);
 
 module.exports = flatFunc;
